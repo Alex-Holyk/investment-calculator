@@ -1,6 +1,8 @@
-import { formatter } from "../util/investment";
+import { calculateInvestmentResults, formatter } from "../util/investment";
 
-export default function Result({ result }) {
+export default function Results({ userInput }) {
+  const results = calculateInvestmentResults(userInput);
+
   return (
     <table id="result">
       <thead>
@@ -13,7 +15,7 @@ export default function Result({ result }) {
         </tr>
       </thead>
       <tbody>
-        {result.map(
+        {results.map(
           ({
             year,
             interest,
