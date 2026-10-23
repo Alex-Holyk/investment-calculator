@@ -90,3 +90,8 @@ body {
 .center {
   text-align: center;
 }
+
+.warning-message {
+  margin: 2rem auto;
+  padding: 1rem;
+}
